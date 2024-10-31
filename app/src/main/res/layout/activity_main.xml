@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_mssv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="MSSV" />
+
+        <EditText
+            android:id="@+id/et_fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_mssv"
+            android:hint="Họ và tên" />
+
+        <RadioGroup
+            android:id="@+id/rg_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_fullname">
+
+            <RadioButton
+                android:id="@+id/rb_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nam" />
+            <RadioButton
+                android:id="@+id/rb_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nữ" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rg_gender"
+            android:hint="Email" />
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_email"
+            android:hint="Số điện thoại" />
+
+        <Spinner
+            android:id="@+id/spn_ward"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_phone" />
+
+        <Spinner
+            android:id="@+id/spn_district"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spn_ward" />
+
+        <Spinner
+            android:id="@+id/spn_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spn_district" />
+
+        <CheckBox
+            android:id="@+id/cb_sport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spn_city"
+            android:text="Thể thao" />
+
+        <CheckBox
+            android:id="@+id/cb_movies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cb_sport"
+            android:text="Phim ảnh" />
+
+        <CheckBox
+            android:id="@+id/cb_music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cb_movies"
+            android:text="Âm nhạc" />
+
+        <CheckBox
+            android:id="@+id/cb_terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cb_music"
+            android:text="Chấp nhận điều khoản" />
+
+        <Button
+            android:id="@+id/btn_select_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cb_terms"
+            android:text="Chọn ngày sinh" />
+
+        <CalendarView
+            android:id="@+id/calendar_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_select_date"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/calendar_view"
+            android:text="Đăng ký" />
+
+    </RelativeLayout>
+</ScrollView>
